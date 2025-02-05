@@ -12,6 +12,6 @@ Um aplicativo simples para sorteio aleatório de nomes de amigos, desenvolvido p
 
 ### 2. Sistema de Sorteio Inteligente
 - **Validação mínima de participantes:** Requer pelo menos 2 amigos para sorteio
-- **Algoritmo aleatório robusto:** 
+- **Algoritmo para sorteio com:** 
   ```javascript
   Math.floor(Math.random() * amigos.length)
