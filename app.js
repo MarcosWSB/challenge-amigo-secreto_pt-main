@@ -11,8 +11,6 @@ function adicionarAmigo() {
         limparCampo();
     } else{
         amigos.push(temp.value);
-        console.log("Teste");
-        console.log(amigos);
         limparCampo();
         listaAmigos();
     }
@@ -35,13 +33,14 @@ function listaAmigos() {
 }
 
 function sortearAmigo() {
-    if(amigos.length <= 1){
-        alert("Faça a lista primeiro.");
-        console.log("teste");
-    } else {
-        let max = amigos.length;
-        let random = Math.floor(Math.random()*max);
+    let resultadoSorteio =document.getElementById("resultado");
 
-        alert(`O amigo sorteado foi ${amigos[random]}`)
+    if(amigos.length <= 1){
+        resultadoSorteio.innerHTML = "Adicione pelo menos dois amigos para o sorteio." 
+        return
     }
+        let max = amigos.length;
+        let sorteadoInd = Math.floor(Math.random()*max);
+
+        resultadoSorteio.innerHTML = `O amigo sorteado foi ${amigos[sorteadoInd]}`
 }
